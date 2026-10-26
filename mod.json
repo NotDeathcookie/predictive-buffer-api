@@ -10,7 +10,7 @@
 	"description": "Shared engine and API for building Geometry Dash input-buffer mods. Does nothing on its own.",
 	"tags": ["developer", "gameplay", "utility"],
 	"api": {
-		"headers": [
+		"include": [
 			"include/pbuf/*.hpp"
 		]
 	}
