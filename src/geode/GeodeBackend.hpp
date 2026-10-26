@@ -31,25 +31,25 @@ public:
     void configure(Config const& cfg);        // rules the probe needs (continuous modes, dual policy)
     void createSimPlayers();                  // idempotent; no-op without a PlayLayer
     void shutdown();                          // releases simulated players
-    bool isSimPlayer(geode::prelude::PlayerObject* p) const { return p && (p == m_sim1 || p == m_sim2); }
+    bool isSimPlayer(PlayerObject* p) const { return p && (p == m_sim1 || p == m_sim2); }
     void markSimulatedDeath() { m_simDead = true; }
     void setFrameDelta(float dt);
 
     /// Reused by the collisionCheckObjects hook: avoids one heap allocation per simulated tick.
-    gd::vector<geode::prelude::GameObject*>& scratch() { return m_scratch; }
+    gd::vector<GameObject*>& scratch() { return m_scratch; }
 
 private:
     // ---- IProbe ----
     Tick survival(Tick delay, bool push, Tick horizon) override;
     std::int64_t simulatedTicks() const override { return m_simTicks; }
 
-    geode::prelude::PlayerObject* createSimPlayer();
-    static void syncSimPlayer(geode::prelude::PlayerObject* sim, geode::prelude::PlayerObject* real);
-    static void resetCollisionLog(geode::prelude::PlayerObject* p);
+    PlayerObject* createSimPlayer();
+    static void syncSimPlayer(PlayerObject* sim, PlayerObject* real);
+    static void resetCollisionLog(PlayerObject* p);
     float validDt() const { return (m_frameDt > 0.001f && m_frameDt < 2.0f) ? m_frameDt : 0.25f; }
 
-    geode::prelude::PlayerObject* m_sim1 = nullptr;
-    geode::prelude::PlayerObject* m_sim2 = nullptr;
+    PlayerObject* m_sim1 = nullptr;
+    PlayerObject* m_sim2 = nullptr;
     bool  m_simDead = false;
     float m_frameDt = 0.25f;            // 240 TPS normalized dt
 
@@ -65,7 +65,7 @@ private:
     static constexpr int kSettleAirborneTicks = 15;
     static constexpr int kSettleLandedTicks   = 10;
 
-    gd::vector<geode::prelude::GameObject*> m_scratch;
+    gd::vector<GameObject*> m_scratch;
 };
 
 } // namespace pbuf::geodeimpl
