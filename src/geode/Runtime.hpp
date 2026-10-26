@@ -26,7 +26,7 @@ public:
     void onPlayLayerQuit();
     void onEditorInit();
     void onRealPlayerDied();
-    void onPlayerUpdate(geode::prelude::PlayerObject* player);
+    void onPlayerUpdate(PlayerObject* player);
 
     // ---- called from ApiExports.cpp (every function validates `owner`) ----
     geode::Result<> acquire(std::string const& owner, Config cfg);
