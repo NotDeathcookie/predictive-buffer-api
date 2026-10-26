@@ -1,0 +1,46 @@
+{
+	"geode": "5.11.2",
+	"gd": {
+		"win": "2.2081"
+	},
+	"version": "v0.1.0",
+	"id": "your-id.custom-buffer-example",
+	"name": "Custom Buffer (API example)",
+	"developer": "YOUR NAME",
+	"description": "Example consumer of the Predictive Buffer API: a custom preset, a stricter strategy and an F6 hotkey.",
+	"tags": ["gameplay", "developer"],
+	"dependencies": {
+		"your-id.predictive-buffer-api": ">=v0.1.0"
+	},
+	"settings": {
+		"enabled": {
+			"type": "bool",
+			"name": "Enabled",
+			"default": true
+		},
+		"preset": {
+			"type": "string",
+			"name": "Preset",
+			"description": "Ticks: 4 ticks = 1 frame at 60 fps (stock 240 TPS).",
+			"default": "classic-1",
+			"one-of": ["classic-1", "classic-2", "classic-3", "classic-4", "tournament", "off"]
+		},
+		"strict": {
+			"type": "bool",
+			"name": "Strict mode",
+			"description": "Only delay an input when the delayed version survives the whole lookahead.",
+			"default": false
+		},
+		"log-decisions": {
+			"type": "bool",
+			"name": "Log decisions",
+			"default": false
+		},
+		"cycle-key": {
+			"type": "keybind",
+			"name": "Cycle preset",
+			"default": "F6",
+			"category": "gameplay"
+		}
+	}
+}

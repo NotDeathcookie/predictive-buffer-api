@@ -1,0 +1,17 @@
+{
+	"geode": "5.11.2",
+	"gd": {
+		"win": "2.2081"
+	},
+	"version": "v0.1.0",
+	"id": "SSIlent.predictive-buffer-api",
+	"name": "Predictive Buffer API",
+	"developer": "SSIlent",
+	"description": "Shared engine and API for building Geometry Dash input-buffer mods. Does nothing on its own.",
+	"tags": ["developer", "gameplay", "utility"],
+	"api": {
+		"headers": [
+			"include/pbuf/*.hpp"
+		]
+	}
+}
