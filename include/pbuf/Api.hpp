@@ -31,7 +31,7 @@
 // Must be set manually (Geode docs): macros like GEODE_MOD_ID would resolve to the
 // CONSUMER's id. tools/set_mod_id.py rewrites this line together with mod.json.
 #undef MY_MOD_ID
-#define MY_MOD_ID "your-id.predictive-buffer-api"
+#define MY_MOD_ID "ssilent.predictive-buffer-api"
 
 namespace pbuf::api {
 
