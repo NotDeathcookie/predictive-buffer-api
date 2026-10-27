@@ -15,7 +15,7 @@ Every input-buffer variant today is a fork of the same ~650-line `main.cpp`: the
 simulation, edited constants. With this repo a variant is a small mod:
 
 ```cpp
-#include <yourname.predictive-buffer-api/include/pbuf/pbuf.hpp>
+#include <ssilent.predictive-buffer-api/include/pbuf/pbuf.hpp>
 static pbuf::Buffer g_buffer(GEODE_MOD_ID);
 $on_mod(Loaded) {
     auto cfg = pbuf::Config::recommended();
