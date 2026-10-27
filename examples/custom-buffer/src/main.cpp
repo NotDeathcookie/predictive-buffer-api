@@ -8,7 +8,7 @@
 #include <Geode/Geode.hpp>
 #include <Geode/loader/SettingV3.hpp>
 
-#include <your-id.predictive-buffer-api/include/pbuf/pbuf.hpp>
+#include <ssilent.predictive-buffer-api/include/pbuf/pbuf.hpp>
 
 using namespace geode::prelude;
 
@@ -19,7 +19,7 @@ namespace {
 // Strategies see only the probe, never the game, so this is also unit-testable with a fake probe.
 class StrictStrategy final : public pbuf::IBufferStrategy {
 public:
-    std::string_view id() const noexcept override { return "your-id.custom-buffer-example.strict"; }
+    std::string_view id() const noexcept override { return "ssilent.custom-buffer-example.strict"; }
 
     pbuf::Decision decide(pbuf::InputContext const& ctx, pbuf::IProbe& probe) override {
         pbuf::Decision d = inner_.decide(ctx, probe);
@@ -44,7 +44,7 @@ public:
 pbuf::Buffer g_buffer(GEODE_MOD_ID);   // GEODE_MOD_ID = this mod's id: the buffer's owner name
 std::shared_ptr<LogObserver> g_log = std::make_shared<LogObserver>();
 
-constexpr char const* kStrict = "your-id.custom-buffer-example.strict";
+constexpr char const* kStrict = "ssilent.custom-buffer-example.strict";
 
 void applySettings() {
     auto* mod = Mod::get();
