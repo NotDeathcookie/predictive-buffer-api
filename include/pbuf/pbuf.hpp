@@ -1,6 +1,6 @@
 // Predictive Buffer API - umbrella header for consumer mods.
 //
-//   #include <your-id.predictive-buffer-api/include/pbuf/pbuf.hpp>
+//   #include <ssilent.predictive-buffer-api/include/pbuf/pbuf.hpp>
 //
 // Everything except Api.hpp is Geode-free and can also be included on its own
 // (for strategies, tests, tools).
