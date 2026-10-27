@@ -4,13 +4,13 @@
 		"win": "2.2081"
 	},
 	"version": "v0.1.0",
-	"id": "your-id.custom-buffer-example",
+	"id": "ssilent.custom-buffer-example",
 	"name": "Custom Buffer (API example)",
 	"developer": "YOUR NAME",
 	"description": "Example consumer of the Predictive Buffer API: a custom preset, a stricter strategy and an F6 hotkey.",
 	"tags": ["gameplay", "developer"],
 	"dependencies": {
-		"your-id.predictive-buffer-api": ">=v0.1.0"
+		"silent.predictive-buffer-api": ">=v0.1.0"
 	},
 	"settings": {
 		"enabled": {
